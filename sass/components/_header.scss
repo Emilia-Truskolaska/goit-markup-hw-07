@@ -1,0 +1,114 @@
+.header {
+  border-bottom: 1px solid var(--medium-bright-grey);
+  height: 80px;
+}
+.menu__link {
+  text-decoration: none;
+  color: var(--almost-black);
+
+  &:hover {
+    color: var(--blue);
+    cursor: pointer;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic-bezier);
+  }
+}
+.menu__contact {
+  text-decoration: none;
+  color: var(--grey);
+}
+.menu__logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--black);
+  margin-right: 93px;
+
+  & span {
+    color: var(--blue);
+  }
+}
+
+.menu__contacts {
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    margin-right: 30px;
+  }
+
+  &:hover .menu__icon {
+    fill: var(--blue);
+    cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic-bezier);
+  }
+
+  &:hover .menu__contact {
+    color: var(--blue);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic-bezier);
+  }
+}
+
+.menu__list2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--almost-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu__nav {
+  display: flex;
+  align-items: center;
+}
+.menu__list1 {
+  display: flex;
+}
+.menu__option {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 46px;
+  }
+}
+.menu__link--active {
+  color: var(--blue);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 4px;
+    background: var(--blue);
+    border-radius: 2px;
+  }
+}
+.menu__icon {
+  margin-right: 10px;
+  fill: var(--grey);
+}
